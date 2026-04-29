@@ -1,0 +1,75 @@
+body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #1a1a1a; color: #e0e0e0; padding: 20px; }
+.container { max-width: 1200px; margin: auto; background: #2d2d2d; padding: 30px; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+h1, h2, h3 { color: #f39c12; border-bottom: 2px solid #f39c12; padding-bottom: 5px; margin-top: 0; }
+.secao { margin-bottom: 25px; border: 1px solid #444; padding: 15px; border-radius: 8px; background: #252525; }
+.grid-input, .grid-atributos { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; margin-top: 10px; }
+label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 0.85em; }
+input, select, textarea { width: 100%; padding: 10px; background: #3d3d3d; border: 1px solid #555; color: white; border-radius: 4px; box-sizing: border-box; }
+textarea { resize: vertical; }
+button { background: #f39c12; color: #1a1a1a; border: none; padding: 15px; border-radius: 5px; cursor: pointer; font-weight: bold; width: 100%; margin-top: 10px; transition: 0.2s; }
+button:hover { background: #e67e22; }
+
+.status-ok { color: #2ecc71; margin-top: 10px; font-weight: bold; }
+.status-erro { color: #e74c3c; margin-top: 10px; font-weight: bold; }
+.status-valido { color: #2ecc71; font-size: 0.75em; display: block; }
+.status-alerta { color: #e74c3c; font-size: 0.75em; display: block; font-weight: bold; }
+.calculo-automatico { margin-top: 15px; padding: 10px; background: #111; border-left: 3px solid #f39c12; font-style: italic; color: #aaa; font-size: 0.85em; }
+
+/* Modal */
+.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); }
+.modal-content { background-color: #2d2d2d; margin: 2% auto; padding: 25px; border: 2px solid #f39c12; width: 75%; max-height: 90vh; overflow-y: auto; border-radius: 8px; }
+.modal-botoes { display: flex; gap: 10px; margin-top: 15px; }
+.btn-confirmar { background: #27ae60; color: white; margin-top: 0; }
+.btn-confirmar:disabled { background: #555; cursor: not-allowed; }
+.btn-fechar { background: #e74c3c; color: white; margin-top: 0; }
+.btn-raca { background: #3498db; margin-top: 5px; padding: 5px; font-size: 0.8em; }
+
+.modal-grupo { margin-bottom: 20px; padding: 15px; border: 1px dashed #555; background: #222; border-radius: 5px; }
+.modal-grupo label { background: #333; padding: 10px; border-radius: 4px; cursor: pointer; margin-bottom: 5px; display: block;}
+.descricao-raca { margin-top: 10px; padding: 10px; background: #1a2a3a; border-left: 4px solid #3498db; font-style: italic; font-size: 0.9em; border-radius: 0 4px 4px 0; }
+
+/* Habilidades Grid */
+.habilidades-grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
+.hab-card { background: #222; border: 1px solid #444; border-radius: 5px; padding: 15px; }
+.hab-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 10px; }
+.hab-header h3 { margin: 0; border: none; color: #3498db; font-size: 1.1em; }
+.hab-controls { display: flex; gap: 15px; align-items: center; }
+.check-hab { transform: scale(1.3); cursor: pointer; }
+.aditivos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; margin-top: 10px; background: #111; padding: 10px; border-radius: 5px; }
+.aditivo-item { display: flex; justify-content: space-between; background: #333; padding: 8px; border-radius: 3px; align-items: center; font-size: 0.85em;}
+.akuma-box { background: #111; padding: 12px; border-radius: 5px; margin-bottom: 10px; border: 1px solid #444; }
+
+/* Traits Layout */
+.painel-pontos { font-size: 1.3em; text-align: center; padding: 8px; background: #000; color: #f39c12; margin-bottom: 15px; border: 1px solid #f39c12; border-radius: 4px; font-weight: bold; }
+.traits-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+.traits-disponiveis, .traits-selecionados { background: #1e1e1e; padding: 15px; border: 1px solid #444; border-radius: 5px; }
+.titulo-quadro { background: #000; color: #f39c12; padding: 8px; border-radius: 4px; text-align: center; border: none; font-size: 0.9em; margin-bottom: 12px; }
+.grid-vantagens { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+.col-vantagem h4 { color: #2ecc71; text-align: center; border-bottom: 1px solid #333; padding-bottom: 5px; margin-top: 0; margin-bottom: 10px; font-size: 0.8em; }
+
+.lista-traits-pequena { display: flex; flex-direction: column; gap: 5px; max-height: 250px; overflow-y: auto; }
+.trait-card { background: #2c3e50; padding: 6px 10px; border-radius: 4px; border: 1px solid #34495e; cursor: pointer; font-size: 0.8em; display: flex; justify-content: space-between; transition: 0.15s; }
+.trait-card:hover { border-color: #f39c12; background: #34495e; }
+.badge-custo { background: rgba(0,0,0,0.5); padding: 1px 5px; border-radius: 10px; font-weight: bold; }
+
+.lista-traits-grande { display: flex; flex-direction: column; gap: 8px; max-height: 500px; overflow-y: auto; }
+.trait-item { background: #333; padding: 10px; border-radius: 4px; border-left: 4px solid #f39c12; display: flex; justify-content: space-between; align-items: center; }
+.trait-item.racial { border-left-color: #3498db; }
+
+.controles-nivel { display: flex; align-items: center; background: #000; padding: 2px; border-radius: 4px; }
+.btn-nivel { background: #444; color: white; border: none; padding: 2px 8px; cursor: pointer; font-weight: bold; border-radius: 2px; width: auto; font-size: 0.8em; }
+.btn-nivel:hover { background: #f39c12; color: black; }
+.nivel-display { padding: 0 8px; font-weight: bold; font-size: 0.8em; }
+.btn-remover-trait { background: #c0392b; color: white; border: none; padding: 3px 7px; border-radius: 3px; cursor: pointer; margin-left: 10px; font-weight: bold; font-size: 0.7em; }
+
+.pericias-tag-container { display: flex; flex-direction: column; gap: 12px; }
+.cat-pericia-bloco { background: #111; padding: 10px; border-radius: 5px; border-top: 2px solid #2ecc71; }
+.cat-pericia-titulo { color: #2ecc71; font-weight: bold; margin-bottom: 8px; font-size: 0.75em; text-transform: uppercase; letter-spacing: 1px; }
+.cat-pericia-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag-pericia { background: #27ae60; color: #000; padding: 3px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold; display: flex; align-items: center; gap: 5px; }
+.tag-pericia.auto { background: #f39c12; }
+.tag-remove { background: rgba(0,0,0,0.2); border-radius: 50%; width: 14px; height: 14px; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.7em; }
+.tag-remove:hover { background: #000; color: #fff; }
+
+.info-trait { margin-top: 15px; padding: 12px; background: #000; color: #f1c40f; border: 1px solid #f39c12; min-height: 40px; border-radius: 5px; font-size: 0.85em; }
+#output { height: 400px; font-family: 'Courier New', monospace; font-size: 11px; background: #000; color: #00ff41; padding: 15px; line-height: 1.5; }
