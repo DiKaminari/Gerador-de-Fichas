@@ -191,7 +191,7 @@ const bancoTraits = [
     { id: "d_mutacao", nome: "Mutação", tipo: "desvantagem", custoBase: 2, max: 1, reqEspec: true, promptMsg: "Qual é a mutação?", desc: (n) => `Você possui uma mutação genética que te torna feio, estranho ou te atrapalha de alguma forma.` },
     { id: "d_gago", nome: "Gago", tipo: "desvantagem", custoBase: 2, max: 1, reqEspec: false, desc: (n) => `Você é gago, tendo assim certa dificuldade para se comunicar. Sendo assim perde 20% em qualquer teste social.` },
     { id: "d_mal_humorado", nome: "Mal-humorado", tipo: "desvantagem", custoBase: 2, max: 5, reqEspec: false, desc: (n) => `Você é naturalmente ranzinza, se irritando facilmente. Você tem desvantagem de ${20*n}% em testes sociais e intelectuais enquanto com raiva.` },
-    { id: "d_sentido_ruim", nome: "Sentido ruim", tipo: "desvantagem", custoBase: 2, max: 5, reqEspec: true, promptMsg: "Qual sentido é ruim?", desc: (n) => `Um de seus sentidos é ruim. Você recebe ${20*n}% de reduction em testes de detecção com esse sentido.` },
+    { id: "d_sentido_ruim", nome: "Sentido ruim", tipo: "desvantagem", custoBase: 2, max: 5, reqEspec: true, promptMsg: "Qual sentido é ruim?", desc: (n) => `Um de seus sentidos é ruim. Você recebe ${20*n}% de redução em testes de detecção com esse sentido.` },
     { id: "d_cleptomaniaco", nome: "Cleptomaníaco", tipo: "desvantagem", custoBase: 2, max: 1, reqEspec: false, desc: (n) => `Você é viciado em roubar, não importa se você precisa ou não do objeto. Deve roubar um item sempre que uma oportunidade surgir.` },
     { id: "d_covarde", nome: "Covarde", tipo: "desvantagem", custoBase: 2, max: 5, reqEspec: false, desc: (n) => `Você é amedrontado facilmente. Recebe desvantagem de ${20*n}% em testes de amedrontamento contra você.` },
     { id: "d_devasso", nome: "Devasso", tipo: "desvantagem", custoBase: 2, max: 5, reqEspec: false, desc: (n) => `Você é viciado na arte do flerte. Recebe desvantagem de ${20*n}% em testes de sedução contra você.` },
@@ -349,7 +349,7 @@ const skillsDb = {
         titleMaster: "Mestre em Haki", 
         requiresExtra: false, 
         bonusTxt: (n) => `• +${20*n}% de escalonamento no cálculo de HP.\n\n• +${1*n} metro(s) no alcance de dano sem tocar do Haoshoku (caso venha a possuir).`, 
-        baseHtml: `[center][b]Base:[/b][/center]\n\n[b]Kenbunshoku:[/b] O usuário de haki possui uma área de 1% de seu poder geral, onde ele percebe as coisas como um sexto sentido, inimigos nessa área que não possuem haki, sofrem 20% de desvantagem em acertar o usuário de haki.\n\n[b]Busoushoku:[/b] O usuário de haki pode cobrir uma parte de seu corpo por vez (cabeça, uma perna, um braço, tronco posterior, tronco anterior) cobrindo também qualquer item nesse local. Coisas cobertas pelo Busoushoku podem acertar logias e ignorar mudanças corporais de akuma para acertarem o corpo original do alvo. Adicionalmente, qualquer ataque feito com esses membros/itens causa 20% mais dano e tem 20% do poder geral como letalidade extra por VDA usado no ataque. Danos recebidos na área do armamento também encaram um dano reduzido de 40% e 40% do poder geral como armadura.\n\n[b]Aura da vontade:[/b] Seu haki do armamento se manifesta como uma aura de “raios” negros, contando como um elemento manipulável para você, te permitindo criar técnicas onde usa e arremessa isso nos ataques. Técnicas assim ganham as vantagens do seu busoushoku.\n\n[b]Protegido:[/b] Qualquer ataque físico contra seus membros protegidos por busoushoku, aplica 1 nível de condition a menos.`, 
+        baseHtml: `[center][b]Base:[/b][/center]\n\n[b]Kenbunshoku:[/b] O usuário de haki possui uma área de 1% de seu poder geral, onde ele percebe as coisas como um sexto sentido, inimigos nessa área que não possuem haki, sofrem 20% de desvantagem em acertar o usuário de haki.\n\n[b]Busoushoku:[/b] O usuário de haki pode cobrir uma parte de seu corpo por vez (cabeça, uma perna, um braço, tronco posterior, tronco anterior) cobrindo também qualquer item nesse local. Coisas cobertas pelo Busoushoku podem acertar logias e ignorar mudanças corporais de akuma para acertarem o corpo original do alvo. Adicionalmente, qualquer ataque feito com esses membros/itens causa 20% mais dano e tem 20% do poder geral como letalidade extra por VDA usado no ataque. Danos recebidos na área do armamento também encaram um dano reduzido de 40% e 40% do poder geral como armadura.\n\n[b]Aura da vontade:[/b] Seu haki do armamento se manifesta como uma aura de “raios” negros, contando como um elemento manipulável para você, te permitindo criar técnicas onde usa e arremessa isso nos ataques. Técnicas assim ganham as vantagens do seu busoushoku.\n\n[b]Protegido:[/b] Qualquer ataque físico contra seus membros protegidos por busoushoku, aplica 1 nível de condição a menos.`, 
         masterHtml: `[center][b]Mestre em haki:[/b][/center]\n\n[b]Melhorias:[/b]\n* Seu kenbunshoku agora prevê um pouco do futuro, inimigos sem mestre do haki na área do seu Kenbunshoku tem 20% de desvantagem em teste pra te acertar e inimigos sem haki tem 30% de desvantagem.\n* Seu busoushoku agora pode cobrir todo seu corpo à vontade e dobra seus valores.\n* Aura dá vontade agora também aplica os efeitos de Ryou e Haoshoku avançado se assim você quiser.\n* Protegido reduz três níveis ao invés de um.\n\n[center][b]Ganha:[/b][/center]\n\n[b]Haoshoku:[/b] O usuário pode liberar seu haki do rei na mesma área que seu kenbunshoku afeta, todos os inimigos na área com menos de 80% do poder geral do usuário tomam 10 niveis de amedrontado e caso tenham menos de 60% do poder geral, desmaiam com o HP em 0. Um uso por aventura.\n\n[b]Ryou:[/b] Seu busoushoku é aplicado dentro dos alvos, os danificando por dentro, ao usar isso num golpe, o golpe escalará 20% mais e causará 50% mais dano.\n\n[b]Haoshoku avançado:[/b] Agora você pode aplicar seu haki do rei no ataque, isso faz com que seu ataque faça contato a 30 cm do alvo, ou seja, o ataque causa dano sem relar no alvo visualmente. Adicionalmente, esses ataques causam 15% da vida atual do alvo como dano extra IRREDUTÍVEL, assim como 10% do seu dano com o haoshoku se torna irredutível.` 
     },
     meitou: { 
@@ -442,8 +442,6 @@ function adicionarPericiasEmBloco() {
 }
 
 function removerPericia(nome, cat) {
-    // FIX: Para perícias fixas a categoria é enviada como '' (string vazia) no onclick.
-    // Usamos `(p.categoria || "")` para garantir que o undefined de isFixa se iguale a "".
     const idx = userPericias.findIndex(p => p.nome === nome && (p.categoria || "") === cat);
     if(idx !== -1) {
         userPericias.splice(idx, 1);
@@ -988,12 +986,16 @@ function gerarFicha() {
     const bonusG = calcularBonusAtributos();
     const temRacial = (nome) => tracosRaciaisConfirmados.some(t => t.nome === nome);
 
-    // Montar Vantagens / Desvantagens
+    // Montar Vantagens / Desvantagens com a matemática exata por categoria
     let vText = "";
     let dText = "";
 
     const groupV = { Rac: [], 1: [], 2: [], 3: [] };
     const groupD = { Rac: [], 1: [], 2: [], 3: [] };
+    
+    // Contadores REAIS de pontos para arrumar o bug dos spoilers
+    const ptsCatV = { 1: 0, 2: 0, 3: 0 };
+    const ptsCatD = { 1: 0, 2: 0, 3: 0 };
 
     let totalVPts = 0;
     let totalDPts = 0;
@@ -1009,16 +1011,24 @@ function gerarFicha() {
         let linha = `${t.nome} ${t.nivel}: ${desc} ${t.especificacao ? '- [i]'+t.especificacao+'[/i]' : ''} (${pts} Pontos)`;
         
         let c = Math.abs(t.custoBase);
-        if (t.tipo === "vantagem") { groupV[c].push(linha); totalVPts += pts; }
-        else { groupD[c].push(linha); totalDPts += pts; }
+        if (t.tipo === "vantagem") { 
+            groupV[c].push(linha); 
+            ptsCatV[c] += pts; // Soma matemática exata
+            totalVPts += pts; 
+        }
+        else { 
+            groupD[c].push(linha); 
+            ptsCatD[c] += pts; // Soma matemática exata
+            totalDPts += pts; 
+        }
     });
 
     if(groupV.Rac.length > 0) vText += `[spoiler="Raciais"]\n${groupV.Rac.join('\n\n')}\n[/spoiler]\n\n`;
-    [1,2,3].forEach(c => { if(groupV[c].length > 0) vText += `[spoiler="${c} Ponto - Total ${groupV[c].length * c} Pontos"]\n${groupV[c].join('\n\n')}\n[/spoiler]\n\n`; });
+    [1,2,3].forEach(c => { if(groupV[c].length > 0) vText += `[spoiler="${c} Ponto - Total ${ptsCatV[c]} Pontos"]\n${groupV[c].join('\n\n')}\n[/spoiler]\n\n`; });
     if(totalVPts > 0) vText += `[u][b]TOTAL ${totalVPts} Pontos[/b][/u]`;
 
     if(groupD.Rac.length > 0) dText += `[spoiler="Raciais"]\n${groupD.Rac.join('\n\n')}\n[/spoiler]\n\n`;
-    [1,2,3].forEach(c => { if(groupD[c].length > 0) dText += `[spoiler="${c} Ponto - Total ${groupD[c].length * c} Pontos"]\n${groupD[c].join('\n\n')}\n[/spoiler]\n\n`; });
+    [1,2,3].forEach(c => { if(groupD[c].length > 0) dText += `[spoiler="${c} Ponto - Total ${ptsCatD[c]} Pontos"]\n${groupD[c].join('\n\n')}\n[/spoiler]\n\n`; });
     if(totalDPts > 0) dText += `[u][b]TOTAL ${totalDPts} Pontos[/b][/u]`;
 
     // Montar Habilidades
